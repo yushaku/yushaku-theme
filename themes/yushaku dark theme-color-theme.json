@@ -4,20 +4,23 @@
     "editor.background": "#23272e",
     "editor.foreground": "#e3e1e1",
     "activityBar.background": "#23272e",
-    "sideBar.background": "#1e2227"
+    "sideBar.background": "#1e2227",
+    "statusBar.background": "#23272e",
+    "statusBar.debuggingBackground": "#ff7272",
+    "statusBar.border": "#414345"
   },
   "tokenColors": [
-    //comment setting colors
+    //# comment setting colors
     {
       "name": "Comment",
-      "scope": ["comment", "punctuation.definition.comment"],
+      "scope": ["comment", "punctuation.definition.comment", "comment.block.documentation"],
       "settings": {
         "fontStyle": "italic",
-        "foreground": "#546E7A"
+        "foreground": "#7F848E"
       }
     },
 
-    //HTML and JSX tag color setting
+    //# HTML and JSX tag color setting
     {
       "name": "IMPORT",
       "scope": ["meta.import.js", "variable.other.readwrite"],
@@ -26,13 +29,14 @@
       }
     },
 
-    //operator, comma
+    //# operator, comma
     {
       "name": " \"\" && '' && < >  ",
       "scope": [
         "punctuation.definition.string.begin",
         "punctuation.definition.string.end",
         "punctuation.definition.tag",
+        "string.quoted.double",
         "meta.tag"
       ],
       "settings": {
@@ -58,35 +62,7 @@
         "foreground": "#56B6C2"
       }
     },
-
-    // JS, TS language
-    {
-      "scope": ["variable.other.js"],
-      "settings": {
-        "foreground": "#e5c071"
-      }
-    },
-    {
-      "name": "Variable",
-      "scope": ["variable.other.readwrite.alias.js"],
-      "settings": {
-        "foreground": "#e06c75"
-      }
-    },
-    {
-      "name": "Function, Special Method",
-      "scope": [
-        "entity.name.function",
-        "meta.function-call",
-        "variable.function",
-        "support.function",
-        "keyword.other.special-method"
-      ],
-      "settings": {
-        "foreground": "#3a80d0"
-      }
-    },
-    //variable
+    //# variable
     {
       "name": "Variables",
       "scope": ["variable", "string constant.other.placeholder", "variable.other.constant"],
@@ -102,12 +78,79 @@
       }
     },
 
-    // Attributes
+    //# Attributes
     {
       "name": "Attributes",
       "scope": ["entity.other.attribute-name"],
       "settings": {
         "foreground": "#E5C07B"
+      }
+    },
+    //# JS, TS language   **********************************88888
+    {
+      "scope": ["variable.other.js"],
+      "settings": {
+        "foreground": "#e5c071"
+      }
+    },
+    {
+      "name": "Variable",
+      "scope": ["variable.other.readwrite.alias.js"],
+      "settings": {
+        "foreground": "#e06c75"
+      }
+    },
+    {
+      "name": "object key",
+      "scope": ["meta.object-literal.key"],
+      "settings": {
+        "foreground": "#e06c75"
+      }
+    },
+    {
+      "name": "Function, Special Method",
+      "scope": [
+        "entity.name.function",
+        "meta.function-call",
+        "variable.function",
+        "support.function",
+        "keyword.other.special-method"
+      ],
+      "settings": {
+        "foreground": "#49a4ee"
+      }
+    },
+
+    //**** json ****
+    {
+      "name": "JSON Key",
+      "scope": [
+        "source.json meta.structure.dictionary.json support.type.property-name.json",
+        "punctuation.support.type.property-name.begin.json",
+        "punctuation.support.type.property-name.end.json",
+        "support.type.property-name.json.comments"
+      ],
+      "settings": {
+        "foreground": "#F78C6C"
+      }
+    },
+    {
+      "name": " ':' && ',' ",
+      "scope": [
+        "punctuation.separator.comma",
+        "punctuation.separator.key-value",
+        "punctuation.separator.dictionary.key-value.json.comments",
+        "punctuation.separator.dictionary.pair.json.comments"
+      ],
+      "settings": {
+        "foreground": "#c8c8c8"
+      }
+    },
+    {
+      "name": "constant && number && boolean",
+      "scope": ["constant.language.json.comments", "constant.numeric.json.comments"],
+      "settings": {
+        "foreground": "#efdb5d"
       }
     },
     //==================================================================================
@@ -187,7 +230,7 @@
         "keyword.other"
       ],
       "settings": {
-        "foreground": "#F78C6C"
+        "foreground": "#D19A66"
       }
     },
     {
@@ -260,7 +303,7 @@
     {
       "scope": ["meta.jsx.children.tsx"],
       "settings": {
-        "foreground": "#abb2bf"
+        "foreground": "#dddddd"
       }
     },
     {
@@ -279,7 +322,7 @@
       "name": "CSS Classes",
       "scope": ["entity.other.attribute-name.class", "entity.other.attribute-name.tsx"],
       "settings": {
-        "foreground": "#FFCB6B"
+        "foreground": "#D19A66"
       }
     },
     {
@@ -347,13 +390,7 @@
         "foreground": "#FF5370"
       }
     },
-    {
-      "name": "JSON Key - Level 0",
-      "scope": ["source.json meta.structure.dictionary.json support.type.property-name.json"],
-      "settings": {
-        "foreground": "#C792EA"
-      }
-    },
+
     {
       "name": "JSON Key - Level 1",
       "scope": [

@@ -4,7 +4,7 @@
     "description": "The vscode theme that friendly with you eyes",
     "version": "0.0.1",
     "publisher": "yushaku",
-    "icon": "./logo.png",
+    "icon": "/logo.png",
     "repository": {
         "type": "git",
         "url": "https://github.com/yushaku/yushaku-theme.git"
